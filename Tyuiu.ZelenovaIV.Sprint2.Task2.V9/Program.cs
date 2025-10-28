@@ -1,24 +1,16 @@
-﻿using Tyuiu.ZelenovaIV.Sprint2.Task1.V19.Lib;
+﻿using Tyuiu.ZelenovaIV.Sprint2.Task2.V9.Lib;
+
 internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         DataService ds = new DataService();
-
-        int a = 696;
-        int b = 354;
-        int c = 423;
-        int d = 957;
-
-        bool[] res = new bool[6];
-        res = ds.GetLogicOperations(a, b, c, d);
-
         Console.Title = "Спринт #2 | Выполнил: Зеленова Ю. В. | АСОиУб-25-1";
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт #2                                                               *");
         Console.WriteLine("* Тема: Базовые навыки работы в С#                                        *");
-        Console.WriteLine("* Задание #1                                                              *");
-        Console.WriteLine("* Вариант #19                                                             *");
+        Console.WriteLine("* Задание #2                                                              *");
+        Console.WriteLine("* Вариант #9                                                              *");
         Console.WriteLine("* Выполнил: Зеленова Юлия Владимировна | АСОиУб-25-1                      *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
@@ -29,22 +21,22 @@ internal class Program
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
 
-        Console.WriteLine("a = " + a);
-        Console.WriteLine("b = " + b);
-        Console.WriteLine("c = " + c);
-        Console.WriteLine("d = " + d);
+        int x = 0;
+        int y = 0;
+
+        Console.WriteLine("Введите значение x: ");
+        x = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите значение y: ");
+        y = Convert.ToInt32(Console.ReadLine());
+
+        bool res = true;
+        res = ds.CheckDotInShadedArea(x, y);
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
 
-        for (int i = 0; i < 6; i++)
-        {
-            Console.WriteLine(res[i]);
-        }
-
-        Console.ReadKey();
-
+        Console.WriteLine(res);
+        Console.ReadLine();
     }
-
 }

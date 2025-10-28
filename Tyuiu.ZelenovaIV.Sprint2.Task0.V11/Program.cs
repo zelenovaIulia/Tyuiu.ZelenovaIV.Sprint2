@@ -1,7 +1,7 @@
 ﻿using Tyuiu.ZelenovaIV.Sprint2.Task0.V11.Lib;
 internal class Program
 {
-    private static void Main(string[] args)
+    static void Main(string[] args)
     {
         DataService ds = new DataService();
 
